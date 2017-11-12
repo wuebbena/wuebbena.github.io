@@ -1,10 +1,43 @@
+<html><head>
+  <title>Profile</title>
 
-<h2 style="font-family: Helvetica,Arial,sans-serif;">Infos zur Person</h2>
-<ul style="text-align: left;">
-  <li><a style="font-family: Helvetica,Arial,sans-serif; text-decoration: underline;" href="https://dfk-paris.org/de/person/thorsten-w%C3%BCbbena-599.html">Deutsches
-Forum für Kunstgeschichte Paris / Centre allemand d'histoire de l'art
-Paris</a></li>
-  <br>
-  
-  <li><a style="font-family: Helvetica,Arial,sans-serif; text-decoration: underline;" href="https://www.kunst.uni-frankfurt.de/de/mitarbeiter/seiten/thorsten-wuebbena/zur-person" class="gwd-a-o9v1">Kunstgeschichtliches Institut der Goethe-Universität Frankfurt am Main</a></li>
-</ul>
+
+<!-- das folgende Tag bindet twitter bootstrap ein -->
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- hier einige inline styles, nur als Beispiel -->
+
+  <style type="text/css">
+      /*hier wird allen td elementen ein bestimmter style zugewiesen:*/
+      td {
+        /*...*/
+        font-family: Helvetica,Arial,sans-serif;
+      }
+
+      /*hier wird jedem element mit der class foo (also 'class="foo"') ein style zugewiesen*/
+      .foo {
+        /*...*/
+      }
+      .padded{
+        margin: 30px;
+    }
+    </style>
+</head><body>
+<!-- mit class wie "table" activiert man die bootstrap styles: -->
+<table class="table table-bordered table-striped padded" style=" background-color: rgb(242, 242, 243);">
+
+
+<tr>
+      <td>href="https://dfk-paris.org/de/person/thorsten-w%C3%BCbbena-599.html">Deutsches Forum für Kunstgeschichte Paris / Centre allemand d'histoire de l'art Paris</a>
+      </td>
+      <td>
+        href="https://www.kunst.uni-frankfurt.de/de/mitarbeiter/seiten/thorsten-wuebbena/zur-person">Kunstgeschichtliches Institut der Goethe-Universität Frankfurt am Main</a>
+      </td>
+</tr>
+
+
+
+</table>
+<p align="left" style="margin-left:30px">-- 2017-11-12 --</p>
+</body></html>
