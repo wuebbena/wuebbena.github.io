@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- when using the viewer widget, also include bootstrap to provide a
+      default look, otherwise, just write your own css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/bootswatch@5.2.2/dist/journal/bootstrap.min.css"
+    />
+
+    <!-- include the css for highlighting the XML TEI source (highlight.js) -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/github.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css" href="https://unpkg.com/@wendig/qtei@0.6.1/dist/qtei.min.css"
+    />
+
+    <!-- include these if you intend to use the map component -->
+    <link
+      rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <div is="qtei-viewer"></div>
+
+    <script src="https://unpkg.com/@wendig/qtei@0.6.1/dist/qtei.min.js"></script>
+    <script>
+      var qtei = new QTei.Viewer('[is=qtei-viewer', {
+        src: "https://wuebbena.github.io/public/data/content.xml",
+        processors: [
+          QTei.processors.wrapAll('persName', 'person-fill', 'person'),
+          QTei.processors.wrapAll("rs[type='person']", 'person-fill', 'person'),
+          QTei.processors.wrapAll('placeName', 'geo-alt-fill', 'place'),
+          QTei.processors.wrapAll("rs[type='artwork']", 'palette-fill', 'artwork'),
+          QTei.processors.renderXmlTo('#raw'),
+          QTei.processors.highlightXml('#raw'),
+          QTei.processors.renderContentTo('#content')
+        ]
+      })
+    </script>
+  </body>
+</html>
+```
