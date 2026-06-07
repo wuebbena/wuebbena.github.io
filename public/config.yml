@@ -1,0 +1,124 @@
+baseURL: "https://wuebbena.codeberg.page/" 
+title: Thorsten Wübbena
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+pagination:
+  pagerSize: 20
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: Publications
+          url: publications/
+          weight: 5 
+        - name: Presentations
+          url: presentations/
+          weight: 2
+        - name: Organised conferences, etc.
+          url: conferences/
+          weight: 4 
+        - name: Data
+          url: data/
+          weight: 4 
+        - name: Projects (selection)
+          url: projects/
+          weight: 4 
+        - name: Memberships, committees, etc.
+          url: memberships/
+          weight: 4 
+        - name: Employment history
+          url: employment/
+          weight: 4 
+
+
+
+params:
+    description: "This website serves as a central hub for Thorsten Wübbena’s academic work."
+    author: Thorsten Wübbena
+    DateFormat: "January 2026"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: false
+    MainSections: ["publications","presentations", "conferences", "data", "projects", "memberships", "employment"]
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: Thorsten Wübbena
+          subtitle: "I head the DH Lab and the Digitality in Historical Research research group at the [Leibniz Institute for European History](https://www.ieg-mainz.de/en/) (Mainz)"
+          imageUrl: "picture.jpeg"
+          imageWidth: 160
+          imageHeight: 160
+          buttons:
+            - name: Publications
+              url: publications/
+            - name: Presentations
+              url: presentations/
+            - name: Organised conferences etc.
+              url: conferences/
+            - name: Data, Software
+              url: data/
+            - name: Projects (selection)
+              url: projects/
+            - name: Memberships, committees, etc.
+              url: memberships/
+            - name: Employment history
+              url: employment/
+
+
+    socialIcons:
+        - name: Email
+          url: mailto:wuebbena@ieg-mainz.de
+        - name: Location
+          url: location/
+        - name: ORCID
+          url: https://orcid.org/0000-0001-8172-6097
+        - name: Google Scholar
+          url: https://scholar.google.com/citations?user=GjBl3mQAAAAJ
+        - name: Codeberg
+          url: https://codeberg.org/wuebbena
+        - name: GitHub
+          url: https://github.com/wuebbena
+        - name: Mastodon
+          url: https://fedihum.org/@ThWuebbena
+        - name: Institutional Website
+          url: https://www.ieg-mainz.de/en/person/wuebbena/
+
+    assets:
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Thorsten Wübbena"
+      icon: favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2
